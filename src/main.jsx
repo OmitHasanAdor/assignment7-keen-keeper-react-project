@@ -10,6 +10,7 @@ import ErrorPage from './pages/ErrorPage.jsx'
 import StatsPage from './pages/StatsPage.jsx'
 import FriendDetailsPage from './pages/FriendDetailsPage.jsx'
 import FriendContext from './context/FriendContext.jsx'
+ import { ToastContainer } from 'react-toastify';
 
 
 const router =createBrowserRouter([
@@ -30,5 +31,6 @@ createRoot(document.getElementById('root')).render(
     <FriendContext>
  <RouterProvider router={router} />,
     </FriendContext>
+      <ToastContainer />
    </StrictMode>,
 )

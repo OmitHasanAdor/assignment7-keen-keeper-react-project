@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Context } from './Context';
+import { toast } from 'react-toastify';
 
 
 
@@ -10,9 +11,9 @@ const FriendContext = ({children}) => {
       
         const isExist = callData.find(data=>data.id==friend.id)
         if(isExist){
-            alert('Already added to call list')
+            toast.error('Already added to call list')
         }else{
-            alert(`Call with ${friend.name}`)
+            toast.success(`Call with ${friend.name}`)
         setCallData([...callData,friend])
         }
      
