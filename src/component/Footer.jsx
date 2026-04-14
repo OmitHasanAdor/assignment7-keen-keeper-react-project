@@ -5,12 +5,12 @@ import twitter from '../assets/twitter.png'
 
 const Footer = () => {
     return (
-        <div className=' bg-[#244D3F] py-10 text-white '>
-          <div className="mb-5 md:max-w-[70%] mx-auto space-y-5">
+        <div className=' bg-[#244D3F] py-10 text-white'>
+          <div className="mb-5 max-w-[95%] md:max-w-[70%]  mx-auto space-y-5">
             <h2 className=' text-4xl font-bold text-center'>
             KeenKeeper
             </h2>
-            <p className=" opacity-80">Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
+            <p className=" opacity-80 text-center">Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
           </div>
           <div className=" flex flex-col justify-center items-center gap-5">
             <p className=" text-center ">Social Links</p>
@@ -21,11 +21,11 @@ const Footer = () => {
            </div>
            
           </div>
-          <div className="copy-right flex justify-around mt-10 ">
+          <div className="copy-right flex justify-around mt-10 flex-col-reverse text-center md:flex-row ">
             <div className=" copy">
                 <p className=" opacity-80">© 2026 KeenKeeper. All rights reserved.</p>
             </div>
-            <div className="opacity-80 flex gap-5">
+            <div className="opacity-80 flex gap-5 justify-center  mb-5 md:mb-0">
                 <p className="">Privacy Policy</p>
                 <p className="">Cookies</p>
                 <p className="">Terms of Service</p>

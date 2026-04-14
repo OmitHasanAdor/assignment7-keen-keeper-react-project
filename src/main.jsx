@@ -14,7 +14,7 @@ import FriendContext from './context/FriendContext.jsx'
 
 
 const router =createBrowserRouter([
-  {path:'/' , 
+  {path:'/', 
   Component: MainLayout,
   children:[
      { index: true, Component: HomePage },
@@ -29,7 +29,7 @@ const router =createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <FriendContext>
- <RouterProvider router={router} />,
+ <RouterProvider router={router} />
     </FriendContext>
       <ToastContainer />
    </StrictMode>,
