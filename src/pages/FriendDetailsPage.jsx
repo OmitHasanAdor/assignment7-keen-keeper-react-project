@@ -1,5 +1,7 @@
 import React, { use } from 'react';
 import { FaFileArchive } from 'react-icons/fa';
+import { IoVideocamOutline } from 'react-icons/io5';
+import { MdAddCall, MdOutlineTextsms } from 'react-icons/md';
 import { RiDeleteBin6Line, RiNotificationSnoozeLine } from 'react-icons/ri';
 import { useParams } from 'react-router';
 const bookPromise=fetch('/friends.json').then(res=>res.json())
@@ -12,7 +14,7 @@ const FriendDetailsPage = () => {
     return (
         <div className="bg-[#F8FAFC] py-8">
             <div className=' grid grid-cols-1 md:grid-cols-3 max-w-[85%] mx-auto  gap-5 '>
-           <div className="left space-y-5">
+           <div className="left space-y-3 h-full">
         <div className="rounded-md shadow-md text-center p-3 bg-white">
                  <div className=" flex justify-center items-center"> <img src={findSelectedBook.picture} alt={findSelectedBook.name} className=' h-25 w-25 rounded-[50%]'/></div>
         <div className=" text-center mt-3">
@@ -48,8 +50,8 @@ const FriendDetailsPage = () => {
         <div className=" flex items-center gap-2 rounded-md shadow-md text-center p-3 font-semibold bg-white"><FaFileArchive /> Archive</div>
         <div className=" text-red-600 flex items-center gap-2 rounded-md shadow-md text-center p-3 font-semibold bg-white"><RiDeleteBin6Line /> Delete</div>
            </div>
-           <div className="right col-span-2">
-         <div className="1 flex gap-3 mb-5">
+           <div className="right col-span-2 h-full space-y-6">
+         <div className="1 grid grid-cols-1 md:grid-cols-3 gap-3 mb-5">
          <div className=" p-5 rounded-md shadow-md bg-white ">
             <h3 className=" text-2xl font-semibold text-center">{findSelectedBook.days_since_contact}</h3>
             <p className=" text-gray-500 text-center font-semibold">Days Since Contact</p>
@@ -63,12 +65,32 @@ const FriendDetailsPage = () => {
             <p className=" text-gray-500 text-center font-semibold">Next Due</p>
          </div>
          </div>
-         <div className="2">
-
+         <div className="2 space-y-5 mb-5  rounded-md shadow-md bg-white p-5">
+         <div className=" flex justify-between items-center">
+            <h4 className=' text-xl font-semibold'>Relationship Goal</h4>
+            <p className=" btn">Edit</p>
          </div>
-         <div className="3">
-
+         <p className=""><span className=' text-gray-500'>Connect every</span> <span className=' font-bold'>{findSelectedBook.goal} days</span></p>
          </div>
+      <div className="rounded-md shadow-md bg-white p-5">
+           <h4 className=" font-semibold">Quick Check-In</h4>
+         <div className="3 grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
+         <div className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
+         <span ><MdAddCall /></span>
+         <span>Call</span>
+         </div>
+         <div className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
+         <span><MdOutlineTextsms />
+</span>
+         <span>Text</span>
+         </div>
+         <div className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
+         <span><IoVideocamOutline />
+</span>
+         <span>Video</span>
+         </div>
+         </div>
+      </div>
            </div>
         </div>
         </div>
