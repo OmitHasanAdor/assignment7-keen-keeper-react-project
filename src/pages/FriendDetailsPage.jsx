@@ -24,7 +24,7 @@ const {handleTextBtn}=useContext(Context)
     return (
         <div className="bg-[#F8FAFC] py-8">
             <div className=' grid grid-cols-1 md:grid-cols-3 max-w-[85%] mx-auto  gap-5 '>
-           <div className="left space-y-3 h-full">
+           <div className="left space-y-3">
         <div className="rounded-md shadow-md text-center p-3 bg-white">
                  <div className=" flex justify-center items-center"> <img src={findSelectedBook.picture} alt={findSelectedBook.name} className=' h-25 w-25 rounded-[50%]'/></div>
         <div className=" text-center mt-3">

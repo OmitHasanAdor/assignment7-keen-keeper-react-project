@@ -31,6 +31,6 @@ createRoot(document.getElementById('root')).render(
     <FriendContext>
  <RouterProvider router={router} />
     </FriendContext>
-      <ToastContainer />
+      <ToastContainer autoClose={2000} />
    </StrictMode>,
 )
