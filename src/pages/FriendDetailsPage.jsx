@@ -1,15 +1,19 @@
-import React, { use } from 'react';
+import React, { use, useContext } from 'react';
 import { FaFileArchive } from 'react-icons/fa';
 import { IoVideocamOutline } from 'react-icons/io5';
 import { MdAddCall, MdOutlineTextsms } from 'react-icons/md';
 import { RiDeleteBin6Line, RiNotificationSnoozeLine } from 'react-icons/ri';
 import { useParams } from 'react-router';
+import { Context } from '../context/Context';
 const bookPromise=fetch('/friends.json').then(res=>res.json())
 const FriendDetailsPage = () => {
+  const {handleCallBtn}=useContext(Context)
     const friendData =use(bookPromise)
     const {id} =useParams()
     const findSelectedBook = friendData.find(friend=>friend.id==id)
     console.log(findSelectedBook)
+
+
  
     return (
         <div className="bg-[#F8FAFC] py-8">
@@ -75,7 +79,7 @@ const FriendDetailsPage = () => {
       <div className="rounded-md shadow-md bg-white p-5">
            <h4 className=" font-semibold">Quick Check-In</h4>
          <div className="3 grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
-         <div className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
+         <div onClick={() => handleCallBtn(findSelectedBook)} className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
          <span ><MdAddCall /></span>
          <span>Call</span>
          </div>
