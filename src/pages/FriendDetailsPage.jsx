@@ -5,8 +5,12 @@ import { MdAddCall, MdOutlineTextsms } from 'react-icons/md';
 import { RiDeleteBin6Line, RiNotificationSnoozeLine } from 'react-icons/ri';
 import { useParams } from 'react-router';
 import { Context } from '../context/Context';
+
 const bookPromise=fetch('/friends.json').then(res=>res.json())
+
+
 const FriendDetailsPage = () => {
+const {handleVideoBtn}=useContext(Context)      
   const {handleCallBtn}=useContext(Context)
 const {handleTextBtn}=useContext(Context)
 
@@ -85,14 +89,14 @@ const {handleTextBtn}=useContext(Context)
          <span ><MdAddCall /></span>
          <span>Call</span>
          </div>
+
          <div onClick={() => handleTextBtn(findSelectedBook)} className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
-         <span><MdOutlineTextsms />
-</span>
+         <span><MdOutlineTextsms /></span>
          <span>Text</span>
          </div>
-         <div className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
-         <span><IoVideocamOutline />
-</span>
+
+         <div onClick={() => handleVideoBtn(findSelectedBook)} className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
+         <span><IoVideocamOutline /></span>
          <span>Video</span>
          </div>
          </div>

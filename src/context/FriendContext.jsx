@@ -7,6 +7,17 @@ import { toast } from 'react-toastify';
 const FriendContext = ({children}) => {
       const [callData, setCallData] = useState([])
       const [textData, setTextData] = useState([])
+      const [videoData, setVideoData] = useState([])
+
+      const handleVideoBtn = (friend) =>{
+           const isExist = videoData.find(data=>data.id==friend.id)
+        if(isExist){
+            toast.error('Already added to video list')
+        }else{
+            toast.success(`Video with ${friend.name}`)
+            setVideoData([...videoData,friend])
+        }
+      }
 
       const handleTextBtn = (friend) =>{
           const isExist = textData.find(data=>data.id==friend.id)
@@ -35,7 +46,10 @@ const FriendContext = ({children}) => {
         handleCallBtn,
         handleTextBtn,
             textData,
-            setTextData
+            setTextData,
+            handleVideoBtn,
+            videoData,
+            setVideoData
     }
     return (
       <Context.Provider value={data}>
