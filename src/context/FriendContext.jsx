@@ -6,6 +6,17 @@ import { toast } from 'react-toastify';
 
 const FriendContext = ({children}) => {
       const [callData, setCallData] = useState([])
+      const [textData, setTextData] = useState([])
+
+      const handleTextBtn = (friend) =>{
+          const isExist = textData.find(data=>data.id==friend.id)
+        if(isExist){
+            toast.error('Already added to text list')
+        }else{
+            toast.success(`Text with ${friend.name}`)
+            setTextData([...textData,friend])
+        }
+      }
 
         const handleCallBtn = (friend) =>{
       
@@ -21,7 +32,10 @@ const FriendContext = ({children}) => {
     const data ={
         callData,
         setCallData,
-        handleCallBtn
+        handleCallBtn,
+        handleTextBtn,
+            textData,
+            setTextData
     }
     return (
       <Context.Provider value={data}>

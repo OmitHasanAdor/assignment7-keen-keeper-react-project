@@ -8,6 +8,8 @@ import { Context } from '../context/Context';
 const bookPromise=fetch('/friends.json').then(res=>res.json())
 const FriendDetailsPage = () => {
   const {handleCallBtn}=useContext(Context)
+const {handleTextBtn}=useContext(Context)
+
     const friendData =use(bookPromise)
     const {id} =useParams()
     const findSelectedBook = friendData.find(friend=>friend.id==id)
@@ -83,7 +85,7 @@ const FriendDetailsPage = () => {
          <span ><MdAddCall /></span>
          <span>Call</span>
          </div>
-         <div className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
+         <div onClick={() => handleTextBtn(findSelectedBook)} className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
          <span><MdOutlineTextsms />
 </span>
          <span>Text</span>
