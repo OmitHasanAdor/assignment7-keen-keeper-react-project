@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Jenkins",
+    "picture": "https://imgcdn.stablediffusionweb.com/2024/9/19/f361e5d8-0ab0-4a70-8ed2-56db9080e4f3.jpg",
+    "email": "sarah.j@outlook.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": [
+      "college",
+      "hiking"
+    ],
+    "bio": "Study buddy from sophomore year. We both share a passion for trail running and Pacific Northwest photography.",
+    "goal": 30,
+    "next_due_date": "2024-11-15"
+  },
+  {
+    "id": 2,
+    "name": "Marcus Thorne",
+    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    "email": "m.thorne88@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": [
+      "work",
+      "close friend"
+    ],
+    "bio": "Former lead developer at my first startup. He is a great mentor for cloud architecture and career growth.",
+    "goal": 60,
+    "next_due_date": "2025-01-20"
+  },
+  {
+    "id": 3,
+    "name": "Elena Rodriguez",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU9_0t583hRRcdwduPYyy6w-X7Fzo__WAfvQ&s",
+    "email": "elena.rod@gmail.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": [
+      "neighbor",
+      "cooking"
+    ],
+    "bio": "Lives three doors down. We exchange sourdough starters and host neighborhood potlucks once a month.",
+    "goal": 14,
+    "next_due_date": "2024-12-04"
+  },
+  {
+    "id": 4,
+    "name": "David Chen",
+    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+    "email": "dchen_designs@me.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": [
+      "high school"
+     
+    ],
+    "bio": "Childhood best friend. We catch up on gaming news and play competitive shooters on weekends.",
+    "goal": 7,
+    "next_due_date": "2024-11-28"
+  },
+  {
+    "id": 5,
+    "name": "Amina Okafor",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMgp5IIFVWs_A5-_NQvKffPu8T6wEMQOPU8A&s",
+    "email": "amina.okafor@university.edu",
+    "days_since_contact": 82,
+    "status": "overdue",
+    "tags": [
+      "travel",
+      "museums"
+    ],
+    "bio": "Met while backpacking through Italy. She is a history professor with incredible stories about ancient ruins.",
+    "goal": 90,
+    "next_due_date": "2024-10-10"
+  },
+  {
+    "id": 6,
+    "name": "Julian Vane",
+    "picture": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce",
+    "email": "julian.vane@musicmail.com",
+    "days_since_contact": 25,
+    "status": "almost due",
+    "tags": [
+      "band",
+      "creative"
+    ],
+    "bio": "Bassist in our weekend jazz fusion group. Always knows about the best underground concerts in the city.",
+    "goal": 30,
+    "next_due_date": "2024-12-10"
+  },
+  {
+    "id": 7,
+    "name": "Chloe Whitmore",
+    "picture": "https://imgcdn.stablediffusionweb.com/2024/9/19/928ceab4-6cbe-4078-afd3-e31d65c49a33.jpg",
+    "email": "chloe.whit@lifestyle.co",
+    "days_since_contact": 10,
+    "status": "on-track",
+    "tags": [
+      "gym",
+       "work"
+    ],
+    "bio": "Training partner for the upcoming marathon. Her discipline keeps me motivated on those 5 AM runs.",
+    "goal": 21,
+    "next_due_date": "2024-12-15"
+  },
+  {
+    "id": 8,
+    "name": "Samir Gupta",
+    "picture": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+    "email": "samir.gupta@fintech.io",
+    "days_since_contact": 305,
+    "status": "overdue",
+    "tags": [
+      "ex-colleague"
+    ],
+    "bio": "A brilliant financial analyst I worked with 5 years ago. Need to reconnect regarding industry trends.",
+    "goal": 180,
+    "next_due_date": "2024-06-15"
+  }
+]
