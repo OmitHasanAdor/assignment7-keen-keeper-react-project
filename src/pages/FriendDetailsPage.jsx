@@ -24,7 +24,7 @@ const {handleAddActivity}=useContext(Context)
 
 
     const findSelectedBook = friendData.find(friend=>friend.id==id)
-    console.log(findSelectedBook)
+   //  console.log(findSelectedBook)
       if (!findSelectedBook) {
     return <div className=' flex justify-center items-center'><span className="loading loading-spinner loading-xl"></span></div>
   }

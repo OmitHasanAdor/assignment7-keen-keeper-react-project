@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Sarah Jenkins",
-    "picture": "https://imgcdn.stablediffusionweb.com/2024/9/19/f361e5d8-0ab0-4a70-8ed2-56db9080e4f3.jpg",
+    "picture": "https://media.licdn.com/dms/image/v2/D4D03AQHjwaXfJFgwMw/profile-displayphoto-scale_400_400/B4DZpJKMGqKQAg-/0/1762164009641?e=2147483647&v=beta&t=hf713vP8AHhsdTQhBp_xpPbIjhLrdpy_UIolWuDW6Rw",
     "email": "sarah.j@outlook.com",
     "days_since_contact": 45,
     "status": "overdue",
@@ -32,7 +32,7 @@
   {
     "id": 3,
     "name": "Elena Rodriguez",
-    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU9_0t583hRRcdwduPYyy6w-X7Fzo__WAfvQ&s",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4s3Wp0mqK4Z8iI2lVHRumTDsgrcr7GjiXKw&s",
     "email": "elena.rod@gmail.com",
     "days_since_contact": 13,
     "status": "almost due",
@@ -92,7 +92,7 @@
   {
     "id": 7,
     "name": "Chloe Whitmore",
-    "picture": "https://imgcdn.stablediffusionweb.com/2024/9/19/928ceab4-6cbe-4078-afd3-e31d65c49a33.jpg",
+    "picture": "https://mir-s3-cdn-cf.behance.net/projects/404/785a06156859609.Y3JvcCwzOTk5LDMxMjgsMCw2MTM.jpg",
     "email": "chloe.whit@lifestyle.co",
     "days_since_contact": 10,
     "status": "on-track",
