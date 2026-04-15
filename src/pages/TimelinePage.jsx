@@ -42,7 +42,7 @@ const TimelinePage = () => {
       {/* content */}
       <div>
         <h4>
-          {item.type} with {item.name}
+          <span className=' font-bold'>{item.type}</span> with {item.name}
         </h4>
         <p>{item.formattedDate}</p>
       </div>

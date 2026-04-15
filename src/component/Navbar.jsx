@@ -1,7 +1,8 @@
 import React from 'react';
-import { MdAddHomeWork } from 'react-icons/md';
+import { MdAddHomeWork, MdOutlineQueryStats } from 'react-icons/md';
 import { Link, NavLink } from 'react-router';
 import logo from '../assets/logo.png'
+import { RiTimeLine } from 'react-icons/ri';
 
 const Navbar = () => {
     return (
@@ -13,8 +14,10 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
       
        <li><NavLink to={"/"} className={({isActive})=> isActive ? 'bg-[#244D3F] text-white flex items-center gap-2' : ' text-gray-700 flex items-center gap-2'}><MdAddHomeWork /> Home</NavLink></li>
-       <li><NavLink to={"/timeline"} className={({isActive})=> isActive ? 'bg-[#244D3F] text-white flex items-center gap-2' : ' text-gray-700 flex items-center gap-2'}>Timeline</NavLink></li>
-       <li><NavLink to={"/stats"} className={({isActive})=> isActive ? 'bg-[#244D3F] text-white flex items-center gap-2' : ' text-gray-700 flex items-center gap-2'}>Stats</NavLink></li>
+       <li><NavLink to={"/timeline"} className={({isActive})=> isActive ? 'bg-[#244D3F] text-white flex items-center gap-2' : ' text-gray-700 flex items-center gap-2'}><RiTimeLine />
+ Timeline</NavLink></li>
+       <li><NavLink to={"/stats"} className={({isActive})=> isActive ? 'bg-[#244D3F] text-white flex items-center gap-2' : ' text-gray-700 flex items-center gap-2'}><MdOutlineQueryStats />
+ Stats</NavLink></li>
 
     </ul>
   </div>

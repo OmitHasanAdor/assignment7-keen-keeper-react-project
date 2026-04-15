@@ -1,4 +1,4 @@
-import React, { use, useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaFileArchive } from 'react-icons/fa';
 import { IoVideocamOutline } from 'react-icons/io5';
 import { MdAddCall, MdOutlineTextsms } from 'react-icons/md';
@@ -6,24 +6,31 @@ import { RiDeleteBin6Line, RiNotificationSnoozeLine } from 'react-icons/ri';
 import { useParams } from 'react-router';
 import { Context } from '../context/Context';
 
-const bookPromise=fetch('/friends.json').then(res=>res.json())
+
 
 
 const FriendDetailsPage = () => {
-// const {handleVideoBtn}=useContext(Context)      
-//   const {handleCallBtn}=useContext(Context)
-// const {handleTextBtn}=useContext(Context)
+     const [friendData, setFriendData] = useState([])
+     const {id} =useParams()
+
+       useEffect(() => {
+    fetch('/friends.json')
+      .then(res => res.json())
+      .then(data => setFriendData(data))
+  }, [])
+
 
 const {handleAddActivity}=useContext(Context)
 
-    const friendData =use(bookPromise)
-    const {id} =useParams()
+
     const findSelectedBook = friendData.find(friend=>friend.id==id)
     console.log(findSelectedBook)
+      if (!findSelectedBook) {
+    return <div className=' flex justify-center items-center'><span className="loading loading-spinner loading-xl"></span></div>
+  }
 
-
- 
     return (
+      
         <div className="bg-[#F8FAFC] py-8">
             <div className=' grid grid-cols-1 md:grid-cols-3 max-w-[85%] mx-auto  gap-5 '>
            <div className="left space-y-3">
