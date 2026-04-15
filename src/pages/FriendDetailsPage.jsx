@@ -10,9 +10,11 @@ const bookPromise=fetch('/friends.json').then(res=>res.json())
 
 
 const FriendDetailsPage = () => {
-const {handleVideoBtn}=useContext(Context)      
-  const {handleCallBtn}=useContext(Context)
-const {handleTextBtn}=useContext(Context)
+// const {handleVideoBtn}=useContext(Context)      
+//   const {handleCallBtn}=useContext(Context)
+// const {handleTextBtn}=useContext(Context)
+
+const {handleAddActivity}=useContext(Context)
 
     const friendData =use(bookPromise)
     const {id} =useParams()
@@ -85,17 +87,17 @@ const {handleTextBtn}=useContext(Context)
       <div className="rounded-md shadow-md bg-white p-5">
            <h4 className=" font-semibold">Quick Check-In</h4>
          <div className="3 grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
-         <div onClick={() => handleCallBtn(findSelectedBook)} className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
+         <div onClick={() =>handleAddActivity(findSelectedBook,'call')} className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
          <span ><MdAddCall /></span>
          <span>Call</span>
          </div>
 
-         <div onClick={() => handleTextBtn(findSelectedBook)} className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
+         <div onClick={() => handleAddActivity(findSelectedBook,'text')} className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
          <span><MdOutlineTextsms /></span>
          <span>Text</span>
          </div>
 
-         <div onClick={() => handleVideoBtn(findSelectedBook)} className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
+         <div onClick={() => handleAddActivity(findSelectedBook,'video')} className="bg-[#F8FAFC] py-5 text-center flex flex-col justify-center items-center gap-5 shadow">
          <span><IoVideocamOutline /></span>
          <span>Video</span>
          </div>
